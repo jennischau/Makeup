@@ -1,0 +1,306 @@
+:root {
+    --color-primary: #FF69B4; /* Màu primary */
+    --color-second:#c32af1;
+    --color-third:#fbbc04; 
+    --color-fouth:#5d5d5d;
+}
+.color-primary{
+    color: var(--color-primary) !important;
+}
+.color-second{
+    color: var(--color-second) !important;
+}
+.color-third{
+    color: var(--color-third) !important;
+}
+.color-fouth{
+    color: var(--color-fouth) !important;
+}
+.bg-color-primary{
+    background-color: var(--color-primary) !important;
+}
+.bg-color-second{
+    background-color: var(--color-second) !important;
+}
+.bg-color-fouth{
+    background-color: var(--color-fouth) !important;
+}
+ul{
+    padding: 0 !important;
+  }
+a{
+    text-decoration: none !important;
+}
+img{
+    border-radius: 0px !important;
+}
+/* Navbar */
+.header{
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0 !important;
+}
+.navbar-brand {
+    color: white !important;
+    font-weight: bold;
+    color: var(--color-third) !important;
+}
+.navbar {
+    padding: 12px !important;
+}
+.navbar .logo{
+    width: 50px;
+}
+.navbar .navbar-toggler{
+    border: none;
+}
+.navbar-nav .nav-link {
+    color: white;
+    font-weight: 600;
+    padding: 0.8rem;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--color-primary) !important;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.navbar-nav .nav-link.show{
+    color: var(--color-primary) !important;
+}
+.navbar-nav .nav-link:hover{
+    color: var(--color-primary) !important;
+    transition: 0.5s;
+}
+.offcanvas {
+    background-color: white;
+    color: black;
+}
+
+.offcanvas-header .btn-close {
+    color: white;
+}
+.navbar-toggler i{
+    color: white;
+    font-size: 28px;
+}
+/* Slider Video */
+.story-wrapper{
+    width: 100%;
+    overflow: hidden;
+  }
+  .story-list .story-item{
+    margin-right: 12px !important;
+  }
+  .story-list .story-item .story-link{
+    user-select: none;
+    display: block;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    transition: 0.2 ease;
+  }
+  
+  .story-list .story-link .story-video {
+    width: 100%;
+    max-width: 300px;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+  .story-list .story-item .story-title{
+    position: absolute;
+    bottom: 8px;
+    left: 10%;
+    color: white;
+    font-size: 14px;
+  }
+  
+  .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after ,
+  .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    color: pink;
+  }
+.about img{
+    max-width: 400px;
+    width: 100%;
+}
+.hidden {
+    display: none;
+  }
+/*  */
+.service-card {
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #a9a9a9;
+}
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.service-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+.service-card .btn {
+    margin-top: 10px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+.service-card .btn:hover {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+
+}
+.feature-section .image-container img {
+    width: 100%;
+    max-width: 500px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+.feature-section .image-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.feature-section {
+    background-color: #f8f9fa;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.feature-section h5 {
+    font-weight: bold;
+}
+.feature-section p {
+    color: #666;
+    line-height: 1.6;
+}
+.list-review img{
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 3 / 4;
+    border-radius: 10px;
+}
+
+
+footer .logo a{
+    width: 40px;
+    height: 40px;
+
+}
+footer .logo i{
+    font-size: 30px;
+    top: 5px;
+    left: 5px;
+    position: relative;
+}
+footer .logo .logo-facebook{
+    color: #365899;
+}
+footer .logo .logo-youtube{
+    color: #FF0000;
+    left: 3px;
+}
+footer .logo .logo-tiktok{
+    color: #010101;
+}
+footer .logo .logo-threads{
+    color: black;
+}
+
+    /* Container chứa các nút */
+.floating-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+    
+    /* Nút cơ bản */
+.button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+    /* Hiệu ứng vòng tròn lan tỏa */
+.button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    z-index: 0;
+    opacity: 0;
+    transform: scale(1);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+.messenger {
+    background-color: white;
+}
+
+.messenger img {
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+}
+/* Nút Zalo */
+.zalo {
+    background-color: #2d88ff;
+}
+
+.zalo img {
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+}
+
+/* Nút Call */
+.call {
+    background-color: #f44336;
+}
+
+.call img {
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+}
+
+/* Hiệu ứng khi hover */
+.button:hover::after {
+    opacity: 1;
+    transform: scale(2);
+}
+
+@media (max-width: 768px) {
+    .banner{
+        display: none !important;
+    }
+    .swiper-slide-button{
+        display: none !important;
+    }
+    .navbar .logo{
+        display: block !important;
+    }
+}

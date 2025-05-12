@@ -1,0 +1,25 @@
+:root {
+  --color-primary: #e2a5f5; /* Màu primary */
+  --color-second:#c32af1; 
+}
+ 
+ .booking-form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .form-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  .btn-submit:hover{
+    background-color: white !important;
+    border: 1px solid var(--color-second) !important;
+    color: var(--color-second) !important;
+  }
