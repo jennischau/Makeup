@@ -1,3 +1,6 @@
 @media (max-width: 1023px){
-    
+    .modal-fullscreen .title{
+        top: 12%;
+        left: 12%;
+    }
 }

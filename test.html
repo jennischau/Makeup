@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Viewer</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">    <style>
+        .story-wrapper {
+            display: flex;
+            overflow-x: auto;
+        }
+
+        .story-item {
+            position: relative;
+            width: 100px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        .story-video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .story-title {
+            text-align: center;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        /* Modal Styles */
+        .modal-fullscreen {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1050;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-fullscreen .title{
+            position: absolute;
+            color: white;
+            top: 18%;
+            left: 12%;
+            font-size: 20px;   
+            font-weight: bold;     
+        }
+        .modal-fullscreen video {
+            width: 94%;
+            max-height: 80%;
+            border-radius: 10px;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #fff;
+            font-size: 40px;
+            cursor: pointer;
+        }
+        .navigate {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            cursor: pointer;
+            z-index: 1060;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+        
+        .navigate-left {
+            left: 12px;
+        }
+        
+        .navigate-right {
+            right: 12px;
+        }
+        
+        .navigate:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+        .navigate i{
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="story-wrapper">
+            <div class="story-item" data-video="./video/video 1.mp4">
+                <video src="./video/video 1.mp4" class="story-video" muted loop></video>
+                <p class="story-title">Makeup Dự Tiệc Tại Nhà</p>
+            </div>
+            <div class="story-item" data-video="./video/video 2.mp4">
+                <video src="./video/video 2.mp4" class="story-video" muted loop></video>
+                <p class="story-title">Makeup tại nhà bình tân</p>
+            </div>
+            <div class="story-item" data-video="./video/video 3.mp4">
+                <video src="./video/video 3.mp4" class="story-video" muted loop></video>
+                <p class="story-title">Makeup tại nhà bình tân</p>
+            </div>
+        </div>
+    </div>
+
+<!-- Modal for fullscreen video -->
+<div class="modal-fullscreen" id="storyModal">
+    <span class="modal-close" id="closeModal">&times;</span>
+    <button class="navigate navigate-left" id="prevStory"><i class="fa-solid fa-caret-left"></i></button>
+    <button class="navigate navigate-right" id="nextStory"><i class="fa-solid fa-caret-right"></i></button>
+    <p class="title"></p>
+    <video controls autoplay class="video-fullscrean"></video>
+</div>
+
+
+<script>
+   // Select elements
+const storyItems = document.querySelectorAll('.story-item');
+const modal = document.getElementById('storyModal');
+const modalVideo = modal.querySelector('video');
+const modalTitle = modal.querySelector('.title'); // Sửa từ "modelTitle" thành ".title"
+const closeModal = document.getElementById('closeModal');
+const prevStory = document.getElementById('prevStory');
+const nextStory = document.getElementById('nextStory');
+let currentIndex = -1; 
+// Event listener for story items
+storyItems.forEach((item, index) => {
+    item.addEventListener('click', () => {
+        currentIndex = index; // Ghi lại index hiện tại
+        openModal(index);
+    });
+});
+function openModal(index) {
+    const item = storyItems[index];
+    const videoSrc = item.getAttribute('data-video');
+    const title = item.querySelector('.story-title');
+
+    modalVideo.src = videoSrc;
+    modalTitle.innerText = title.innerText;
+    modal.style.display = 'flex';
+}
+
+// Navigate to previous video
+prevStory.addEventListener('click', () => {
+    currentIndex--;
+    if (currentIndex >= 0) {
+        openModal(currentIndex);
+    }else{
+        currentIndex=storyItems.length - 1;
+        openModal(currentIndex);
+    }
+});
+
+// Navigate to next video
+nextStory.addEventListener('click', () => {
+    currentIndex++;
+    if (currentIndex > storyItems.length - 1) {
+        openModal(0);
+    }else{
+        openModal(currentIndex);
+    }
+});
+
+// Close modal
+closeModal.addEventListener('click', () => {
+    closeModalHandler();
+});
+
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        closeModalHandler();
+    }
+});
+
+// Close modal and reset video
+function closeModalHandler() {
+    modal.style.display = 'none';
+    modalVideo.pause();
+    modalVideo.src = '';
+    modalTitle.innerText = '';
+}
+
+</script>
+<script src="./js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
