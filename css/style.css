@@ -143,7 +143,6 @@ img{
     font-weight: bold;     
 }
 .modal-fullscreen video {
-    width: 94%;
     max-height: 80%;
     border-radius: 10px;
 }
@@ -171,11 +170,11 @@ img{
 }
 
 .navigate-left {
-    left: 12px;
+    left: 20%;
 }
 
 .navigate-right {
-    right: 12px;
+    right: 20%;
 }
 
 .navigate:hover {
