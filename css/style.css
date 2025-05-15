@@ -187,6 +187,7 @@ c .modal-close {
 /* Model picture */
 .img {
     position: relative;
+    width: 33.33333%;
 }
 .img:nth-child(n+4) {
     display: none; /* Ẩn tất cả các ảnh từ ảnh thứ 4 trở đi */
@@ -257,7 +258,7 @@ c .modal-close {
 /*  */
 .service-card {
     text-align: center;
-    padding: 20px;
+    padding: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -268,11 +269,12 @@ c .modal-close {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 .service-card img {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 200px;
     border-radius: 10px;
     object-fit: cover;
-    padding: 8px;
+    padding: 4px;
+    aspect-ratio: 3 / 4;
 }
 .service-card .btn {
     margin-top: 10px;
