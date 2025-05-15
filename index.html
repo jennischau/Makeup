@@ -68,11 +68,11 @@
     <div class="container swiper mt-4">
         <div class="story-wrapper">
             <ul class="story-list swiper-wrapper">
-                <li class="story-item swiper-slide" data-video="./video/video 6.mp4">
+                <li class="story-item swiper-slide" data-video="./video/ky-yeu.mp4">
                     <a href="#" class="story-link">
-                       <video src="./video/video 6.mp4" class="story-video" muted loop></video>                       
+                       <video src="./video/ky-yeu.mp4" class="story-video" muted loop></video>                       
                     </a>
-                    <p class="story-title">Makeup Dự Tiệc Tại Nhà</p>
+                    <p class="story-title">Kỷ yếu</p>
                 </li>
                 <li class="story-item swiper-slide" data-video="./video/video 1.mp4">
                     <a href="#" class="story-link">
@@ -135,6 +135,13 @@
         <p class="title"></p>
         <video controls muted autoplay class="video-fullscrean"></video>
     </div>
+    <!-- Model picture -->
+    <div class="modal-fullscreen" id="pictureModal">
+        <span class="modal-close" id="closeModalPicture">&times;</span>
+        <button class="navigate navigate-left" id="prevPicture"><i class="fa-solid fa-caret-left"></i></button>
+        <button class="navigate navigate-right" id="nextPicture"><i class="fa-solid fa-caret-right"></i></button>
+        <img src="" alt="">
+    </div>
     <!-- About -->
     <div class="container about">
         <div class="row mb-2">
@@ -162,10 +169,10 @@
                       </li>
                     </ul>
                     <p>
-                      Nếu bạn đang tìm kiếm một dịch vụ makeup chuyên nghiệp và tận tâm, Jennis
+                      Nếu bạn đang tìm kiếm một thương hiệu makeup chuyên nghiệp và tận tâm, Jennis
                       chính là sự lựa chọn hoàn hảo. Với sự nhiệt tình và sự chuyên nghiệp,
-                      chúng tôi chắc chắn sẽ giúp bạn trở nên rạng rỡ và tự tin hơn trong bất cứ
-                      dịp nào. Hãy liên hệ với Jennis Châu ngay hôm nay để trở thành một phiên
+                      Jennis Châu chắc chắn sẽ giúp bạn trở nên rạng rỡ và tự tin hơn trong bất cứ
+                      dịp nào. Hãy đặt lịch ngay hôm nay để trở thành một phiên
                       bản đẹp nhất của chính mình.
                     </p>
                 </div>
@@ -179,87 +186,253 @@
        
         <div class="row g-4 mb-3">
             <!-- Dịch vụ 1 -->
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4 image-container">
                 <div class="service-card">
-                    <img src="./img/di-tiec.jpg" alt="Dịch Vụ 1">
+                    <div class="d-flex justify-content-center">
+                        <div class="img">
+                            <img src="./img/di-tiec-1.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                        <div class="img">
+                            <img src="./img/di-tiec-2.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                        <div class="img">
+                            <img src="./img/di-tiec-3.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                            <div class="overlay">+7</div>
+                        </div>
+                        <div class="img">
+                            <img src="./img/di-tiec-4.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                        <div class="img">
+                            <img src="./img/di-tiec-5.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                        <div class="img">
+                            <img src="./img/di-tiec-6.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                        <div class="img">
+                            <img src="./img/di-tiec-7.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                        <div class="img">
+                            <img src="./img/di-tiec-8.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                        <div class="img">
+                            <img src="./img/di-tiec-9.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                    </div>
                     <h5 class="mt-2">Đi Tiệc</h5>
                     <p>Makeup + làm tóc theo yêu cầu, chuyên viên hỗ trợ tư vấn phong cách phù hợp.</p>
                     <button class="btn">Xem Thêm</button>
                 </div>
             </div>
             <!-- Dịch vụ 2 -->
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4 image-container">
                 <div class="service-card">
-                    <img src="./img/di-su-kien.jpg" alt="Dịch Vụ 2">
+                    <div class="d-flex justify-content-center">
+                        <div class="img">
+                            <img src="./img/di-su-kien.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                        <div class="img">
+                            <img src="./img/di-su-kien.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                        <div class="img">
+                            <img src="./img/di-su-kien.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                            <div class="overlay">+2</div>
+                        </div>
+                        <div class="img">
+                            <img src="./img/di-su-kien.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                        <div class="img">
+                            <img src="./img/di-su-kien.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                    </div>
                     <h5 class="mt-2">Đi Sự Kiện</h5>
                     <p>Makeup theo phong cách khách hàng yêu thích, từ Hàn Quốc, Tây, Trung Hoa...</p>
                     <button class="btn">Xem Thêm</button>
                 </div>
             </div>
             <!-- Dịch vụ 3 -->
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4 image-container">
                 <div class="service-card">
-                    <img src="./img/chup-hinh.jpg" alt="Dịch Vụ 3">
+                    <div class="d-flex justify-content-center">
+                        <div class="img">
+                            <img src="./img/chup-hinh.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                        <div class="img">
+                            <img src="./img/chup-hinh.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                        <div class="img">
+                            <img src="./img/chup-hinh.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                            <div class="overlay">+2</div>
+                        </div>
+                        <div class="img">
+                            <img src="./img/chup-hinh.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                        <div class="img">
+                            <img src="./img/chup-hinh.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                    </div>
                     <h5 class="mt-2">Chụp Hình</h5>
                     <p>Kiểu makeup dành cho khách yêu thích chụp ảnh để lưu lại những bức ảnh đẹp.</p>
                     <button class="btn">Xem Thêm</button>
                 </div>
             </div>
             <!-- Dịch vụ 4 -->
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4 image-container">
                 <div class="service-card">
-                    <img src="./img/ky-yeu.jpg" alt="Dịch Vụ 1">
+                    <div class="d-flex justify-content-center">
+                        <div class="img">
+                            <img src="./img/ky-yeu.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                        <div class="img">
+                            <img src="./img/ky-yeu.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                        <div class="img">
+                            <img src="./img/ky-yeu.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                            <div class="overlay">+2</div>
+                        </div>
+                        <div class="img">
+                            <img src="./img/ky-yeu.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                        <div class="img">
+                            <img src="./img/ky-yeu.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                    </div>
                     <h5 class="mt-2">Kỷ Yếu</h5>
                     <p>Makeup + làm tóc theo yêu cầu, chuyên viên hỗ trợ tư vấn phong cách phù hợp.</p>
                     <button class="btn">Xem Thêm</button>
                 </div>
             </div>
             <!-- Dịch vụ 5 -->
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4 image-container">
                 <div class="service-card">
-                    <img src="./img/ba-sui.jpg" alt="Dịch Vụ 2">
+                    <div class="d-flex justify-content-center">
+                        <div class="img">
+                            <img src="./img/ba-sui.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                        <div class="img">
+                            <img src="./img/ba-sui.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                        <div class="img">
+                            <img src="./img/ba-sui.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                            <div class="overlay">+2</div>
+                        </div>
+                        <div class="img">
+                            <img src="./img/ba-sui.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                        <div class="img">
+                            <img src="./img/ba-sui.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                    </div>
                     <h5 class="mt-2">Bà Sui</h5>
                     <p>Makeup theo phong cách khách hàng yêu thích, từ Hàn Quốc, Tây, Trung Hoa...</p>
                     <button class="btn">Xem Thêm</button>
                 </div>
             </div>
             <!-- Dịch vụ 6 -->
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4 image-container">
                 <div class="service-card">
-                    <img src="./img/co-dau.jpg" alt="Dịch Vụ 3">
+                    <div class="d-flex justify-content-center">
+                        <div class="img">
+                            <img src="./img/co-dau.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                        <div class="img">
+                            <img src="./img/co-dau.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                        <div class="img">
+                            <img src="./img/co-dau.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                            <div class="overlay">+2</div>
+                        </div>
+                        <div class="img">
+                            <img src="./img/co-dau.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                        <div class="img">
+                            <img src="./img/co-dau.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                    </div>
                     <h5 class="mt-2">Cô Dâu</h5>
                     <p>Kiểu makeup dành cho khách yêu thích chụp ảnh để lưu lại những bức ảnh đẹp.</p>
                     <button class="btn">Xem Thêm</button>
                 </div>
             </div>
             <!-- Dịch vụ 7 -->
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4 image-container">
                 <div class="service-card">
-                    <img src="./img/chu-re.jpg" alt="Dịch Vụ 1">
+                    <div class="d-flex justify-content-center">
+                        <div class="img">
+                            <img src="./img/chu-re.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                        <div class="img">
+                            <img src="./img/chu-re.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                        <div class="img">
+                            <img src="./img/chu-re.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                            <div class="overlay">+2</div>
+                        </div>
+                        <div class="img">
+                            <img src="./img/chu-re.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                        <div class="img">
+                            <img src="./img/chu-re.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                    </div>
                     <h5 class="mt-2">Chú Rể</h5>
                     <p>Makeup + làm tóc theo yêu cầu, chuyên viên hỗ trợ tư vấn phong cách phù hợp.</p>
                     <button class="btn">Xem Thêm</button>
                 </div>
             </div>
             <!-- Dịch vụ 8 -->
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4 image-container">
                 <div class="service-card">
-                    <img src="./img/nguoi-noi-tieng.jpg" alt="Dịch Vụ 2">
+                    <div class="d-flex justify-content-center">
+                        <div class="img">
+                            <img src="./img/nguoi-noi-tieng.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                        <div class="img">
+                            <img src="./img/nguoi-noi-tieng.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                        <div class="img">
+                            <img src="./img/nguoi-noi-tieng.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                            <div class="overlay">+2</div>
+                        </div>
+                        <div class="img">
+                            <img src="./img/nguoi-noi-tieng.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                        <div class="img">
+                            <img src="./img/nguoi-noi-tieng.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                    </div>
                     <h5 class="mt-2">Người Nổi Tiếng</h5>
                     <p>Makeup theo phong cách khách hàng yêu thích, từ Hàn Quốc, Tây, Trung Hoa...</p>
                     <button class="btn">Xem Thêm</button>
                 </div>
             </div>
             <!-- Dịch vụ 9 -->
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4 image-container">
                 <div class="service-card">
-                    <img src="./img/di-tvc-quang-cao.jpg" alt="Dịch Vụ 3">
+                    <div class="d-flex justify-content-center">
+                        <div class="img">
+                            <img src="./img/di-tvc-quang-cao.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                        <div class="img">
+                            <img src="./img/di-tvc-quang-cao.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                        <div class="img">
+                            <img src="./img/di-tvc-quang-cao.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                            <div class="overlay">+2</div>
+                        </div>
+                        <div class="img">
+                            <img src="./img/di-tvc-quang-cao.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                        <div class="img">
+                            <img src="./img/di-tvc-quang-cao.jpg" class="img-fluid" data-toggle="modal" data-target="#imageModal" data-image="image1.jpg">
+                        </div>
+                    </div>
                     <h5 class="mt-2">TVC Quảng Cáo</h5>
                     <p>Kiểu makeup dành cho khách yêu thích chụp ảnh để lưu lại những bức ảnh đẹp.</p>
                     <button class="btn">Xem Thêm</button>
                 </div>
             </div>
         </div>
+        
         <!-- Bảng giá -->
         <div class="row mt-4">
             <h2 class="text-center text-dark"><strong>BẢNG GIÁ MAKEUP</strong></h2>
@@ -359,7 +532,7 @@
                             </tr>
                             <tr>
                                 <td>Makeup mẹ cô dâu / bà sui + Làm tóc</td>
-                                <td>550000</td>
+                                <td>600000</td>
                             </tr>
                             <tr>
                                 <td>Makeup bưng quả</td>
@@ -367,7 +540,7 @@
                             </tr>
                             <tr>
                                 <td>Makeup người nhà</td>
-                                <td>400000</td>
+                                <td>500000</td>
                             </tr>
                             <tr>
                                 <td>Makeup trẻ em</td>
@@ -563,9 +736,9 @@
                 <div class="col-md-3">
                 <h5 class="mb-3">Theo Dõi Ngay</h5>
                 <div class="d-flex logo">
-                    <a href="#" class="bg-light rounded-circle btn-sm me-2"><i class="fa-brands fa-facebook logo-facebook"></i></i></a>
-                    <a href="#" class="bg-light rounded-circle btn-sm me-2"><i class="fa-brands fa-youtube logo-youtube"></i></a>
-                    <a href="#" class="bg-light rounded-circle btn-sm me-2"><i class="fa-brands fa-tiktok logo-tiktok"></i></a>
+                    <a href="https://www.facebook.com/jennis.chau.makeup" class="bg-light rounded-circle btn-sm me-2"><i class="fa-brands fa-facebook logo-facebook"></i></i></a>
+                    <a href="https://www.youtube.com/@Makeup_Jennis_Chau" class="bg-light rounded-circle btn-sm me-2"><i class="fa-brands fa-youtube logo-youtube"></i></a>
+                    <a href="https://www.tiktok.com/@jennischaumakeup" class="bg-light rounded-circle btn-sm me-2"><i class="fa-brands fa-tiktok logo-tiktok"></i></a>
                     <a href="#" class="bg-light rounded-circle btn-sm me-2"><i class="fa-brands fa-threads logo-threads"></i></a>
                 </div>
                 </div>
@@ -590,11 +763,6 @@
         <a href="tel:0962383803">
             <div class="button call">
                 <img src="./img/phone.png" alt="Call">
-            </div>
-        </a>
-        <a href="https://www.youtube.com/@Makeup_Jennis_Chau">
-            <div class="button youtube">
-                <i class="fa-brands fa-youtube"></i>
             </div>
         </a>
     </div>

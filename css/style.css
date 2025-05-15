@@ -122,7 +122,7 @@ img{
     display: none;
   }
   /* Modal Styles */
-  .modal-fullscreen {
+  #storyModal.modal-fullscreen {
     display: none;
     position: fixed;
     top: 0;
@@ -134,7 +134,7 @@ img{
     justify-content: center;
     align-items: center;
 }
-.modal-fullscreen .title{
+#storyModal.modal-fullscreen .title{
     position: absolute;
     color: white;
     top: 12%;
@@ -142,12 +142,12 @@ img{
     font-size: 20px;   
     font-weight: bold;     
 }
-.modal-fullscreen video {
+#storyModal.modal-fullscreen video {
     max-height: 80%;
     border-radius: 10px;
 }
 
-.modal-close {
+c .modal-close {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -155,7 +155,7 @@ img{
     font-size: 40px;
     cursor: pointer;
 }
-.navigate {
+#storyModal .navigate {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -169,19 +169,90 @@ img{
     height: 50px;
 }
 
-.navigate-left {
+#storyModal .navigate-left {
     left: 20%;
 }
 
-.navigate-right {
+#storyModal .navigate-right {
     right: 20%;
 }
 
-.navigate:hover {
+#storyModal .navigate:hover {
     background: rgba(0, 0, 0, 0.8);
 }
-.navigate i{
+#storyModal .navigate i{
     font-size: 32px;
+}
+
+/* Model picture */
+.img {
+    position: relative;
+}
+.img:nth-child(n+4) {
+    display: none; /* Ẩn tất cả các ảnh từ ảnh thứ 4 trở đi */
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.image-container .overlay {
+    opacity: 1;
+}
+#pictureModal.modal-fullscreen {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+}
+
+#pictureModal.modal-fullscreen img {
+    max-width: 90%;
+    max-height: 80%;
+}
+
+#pictureModal .modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+#pictureModal .navigate {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#pictureModal .navigate-left {
+    left: 10px;
+}
+
+#pictureModal .navigate-right {
+    right: 10px;
 }
 /*  */
 .service-card {
@@ -201,7 +272,7 @@ img{
     height: 100px;
     border-radius: 10px;
     object-fit: cover;
-    margin-bottom: 15px;
+    padding: 8px;
 }
 .service-card .btn {
     margin-top: 10px;
