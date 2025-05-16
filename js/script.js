@@ -165,4 +165,62 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === 'ArrowLeft') showPrevImage();
         if (e.key === 'ArrowRight') showNextImage();
     });
+
+
+    const feedbackImages = Array.from(document.querySelectorAll('.carousel-item img')); // Lấy tất cả ảnh
+    const modalFeedback = document.getElementById('feedbackModal');
+    const feedback = document.querySelector('.feedback .overlay');
+    const modalImageFeedback = document.querySelector('#feedbackModal img');
+    const closeModalFeedback = document.getElementById('closeModalFeedback');
+    const prevButtonFeedback = document.getElementById('prevFeedback');
+    const nextButtonFeedback = document.getElementById('nextFeedback');
+    let currentImageIndexFeedback = 0; // Vị trí ảnh hiện tại
+
+    // Hiển thị modal với ảnh tại vị trí index
+    function openModalFeedback(index) {
+        currentImageIndexFeedback = index;
+        modalImageFeedback.src = feedbackImages[currentImageIndexFeedback].src;
+        modalFeedback.style.display = 'flex'; // Hiển thị modal
+    }
+    modalFeedback.addEventListener('click', (e) => {
+        if (e.target === modalFeedback) {
+            hideModalFeedback();
+        }
+    });
+    feedback.addEventListener('click', () => openModalFeedback(0));
+    // Đóng modal
+    function hideModalFeedback() {
+        modalFeedback.style.display = 'none';
+    }
+
+    // Chuyển sang ảnh trước
+    function showPrevImageFeedback() {
+        currentImageIndexFeedback = (currentImageIndexFeedback - 1 + feedbackImages.length) % feedbackImages.length;
+        modalImageFeedback.src = feedbackImages[currentImageIndexFeedback].src;
+    }
+
+    // Chuyển sang ảnh kế tiếp
+    function showNextImage() {
+        currentImageIndexFeedback = (currentImageIndexFeedback + 1) % feedbackImages.length;
+        modalImageFeedback.src = feedbackImages[currentImageIndexFeedback].src;
+    }
+
+    // Gắn sự kiện click vào mỗi ảnh
+    feedbackImages.forEach((img, index) => {
+        img.addEventListener('click', () => openModalFeedback(index));
+    });
+
+    // Gắn sự kiện cho nút đóng modal
+    closeModalFeedback.addEventListener('click', hideModalFeedback);
+
+    // Gắn sự kiện cho nút điều hướng trái/phải
+    prevButtonFeedback.addEventListener('click', showPrevImageFeedback);
+    nextButtonFeedback.addEventListener('click', showNextImage);
+
+    // Đóng modal khi nhấn phím ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') hideModalFeedback();
+        if (e.key === 'ArrowLeft') showPrevImageFeedback();
+        if (e.key === 'ArrowRight') showNextImage();
+    });
 });

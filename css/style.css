@@ -209,6 +209,7 @@ c .modal-close {
 .image-container .overlay {
     opacity: 1;
 }
+#feedbackModal,
 #pictureModal.modal-fullscreen {
     display: none;
     position: fixed;
@@ -221,12 +222,12 @@ c .modal-close {
     align-items: center;
     z-index: 1050;
 }
-
+#feedbackModal img,
 #pictureModal.modal-fullscreen img {
     max-width: 90%;
     max-height: 80%;
 }
-
+#feedbackModal .modal-close,
 #pictureModal .modal-close {
     position: absolute;
     top: 20px;
@@ -235,7 +236,7 @@ c .modal-close {
     color: white;
     cursor: pointer;
 }
-
+#feedbackModal .navigate,
 #pictureModal .navigate {
     position: absolute;
     top: 50%;
@@ -247,11 +248,11 @@ c .modal-close {
     cursor: pointer;
     padding: 10px;
 }
-
+#feedbackModal .navigate-left,
 #pictureModal .navigate-left {
     left: 10px;
 }
-
+#feedbackModal .navigate-right,
 #pictureModal .navigate-right {
     right: 10px;
 }
@@ -323,37 +324,8 @@ c .modal-close {
 }
 
 /* Review */
-.review-card {
-    text-align: center;
-    padding: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    border: 1px solid #a9a9a9;
-}
-.review-card:hover{
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-.review-card img {
-    max-height: 200px;
-    border-radius: 10px;
-    object-fit: cover;
-    padding: 4px;
-    aspect-ratio: 3 / 4;
-}
-.review-card h5 {
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-.review-card p {
-    font-size: 0.9rem;
-    color: #555;
-}
-.stars {
-    font-size: 24px;
-    color: #ff9800;
-    margin-bottom: 15px;
+.feedback{
+    position: relative;
 }
 /* Footer */
 footer .logo a{
