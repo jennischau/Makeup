@@ -61,7 +61,7 @@ img{
     font-weight: 600;
     padding: 0.8rem;
 }
-
+.navbar-nav .nav-link.show,
 .navbar-nav .nav-link.active {
     color: var(--color-primary) !important;
     font-weight: bold;
