@@ -147,7 +147,7 @@ img{
     border-radius: 10px;
 }
 
-c .modal-close {
+.modal-close {
     position: absolute;
     top: 20px;
     right: 20px;
