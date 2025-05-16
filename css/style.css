@@ -322,7 +322,40 @@ c .modal-close {
     border-radius: 10px;
 }
 
-
+/* Review */
+.review-card {
+    text-align: center;
+    padding: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #a9a9a9;
+}
+.review-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.review-card img {
+    max-height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    padding: 4px;
+    aspect-ratio: 3 / 4;
+}
+.review-card h5 {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.review-card p {
+    font-size: 0.9rem;
+    color: #555;
+}
+.stars {
+    font-size: 24px;
+    color: #ff9800;
+    margin-bottom: 15px;
+}
+/* Footer */
 footer .logo a{
     width: 40px;
     height: 40px;
