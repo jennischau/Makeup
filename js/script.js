@@ -1,6 +1,6 @@
 new Swiper('.story-wrapper', {
     loop: true,
-    spaceBetween: 30,
+    spaceBetween: 12,
     // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
@@ -8,7 +8,7 @@ new Swiper('.story-wrapper', {
     },
     breakpoints:{
         0: {
-            slidesPerView: 3
+            slidesPerView: 4
         },
         1024: {
             slidesPerView: 6
