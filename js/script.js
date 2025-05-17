@@ -8,10 +8,10 @@ new Swiper('.story-wrapper', {
     },
     breakpoints:{
         0: {
-            slidesPerView: 4
+            slidesPerView: 3.5
         },
         1024: {
-            slidesPerView: 6
+            slidesPerView: 6.5
         },
         
     }
@@ -51,6 +51,7 @@ const closeModal = document.getElementById('closeModal');
 const prevStory = document.getElementById('prevStory');
 const nextStory = document.getElementById('nextStory');
 let currentIndex = -1; 
+
 // Event listener for story items
 storyItems.forEach((item, index) => {
     item.addEventListener('click', () => {
@@ -112,13 +113,14 @@ function closeModalHandler() {
 // Picture model
 document.addEventListener('DOMContentLoaded', () => {
     const images = Array.from(document.querySelectorAll('.img img')); // Lấy tất cả ảnh
+    const overlays = Array.from(document.querySelectorAll('.img .overlay')); // Lấy tất cả ảnh
     const modal = document.getElementById('pictureModal');
     const modalImage = modal.querySelector('img');
     const closeModal = document.getElementById('closeModalPicture');
     const prevButton = document.getElementById('prevPicture');
     const nextButton = document.getElementById('nextPicture');
     let currentImageIndex = 0; // Vị trí ảnh hiện tại
-
+    let currentIndexOverlay=0;
     // Hiển thị modal với ảnh tại vị trí index
     function openModal(index) {
         currentImageIndex = index;
