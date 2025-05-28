@@ -63,15 +63,15 @@ img{
 }
 .navbar-nav .nav-link.show,
 .navbar-nav .nav-link.active {
-    color: var(--color-primary) !important;
+    color: white !important;
     font-weight: bold;
     border-radius: 5px;
 }
 .navbar-nav .nav-link.show{
-    color: var(--color-primary) !important;
+    color: white !important;
 }
 .navbar-nav .nav-link:hover{
-    color: var(--color-primary) !important;
+    color: white !important;
     transition: 0.5s;
 }
 .offcanvas {
