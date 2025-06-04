@@ -360,14 +360,17 @@ footer .logo .logo-threads{
     transform: scale(2);
 }
 .header .info img{
-    width: 30px;
-    height: 30px;
+   
 }
 .header .info .zalo{
     border-radius: 12px;
+    width: 30px;
+    height: 30px;
 }
 .header .info .call{
     border-radius: 12px;
+    width: 35px;
+    height: 35px;
 }
 @media (max-width: 768px) {
     .header .navbar-brand{
