@@ -369,8 +369,8 @@ footer .logo .logo-threads{
 }
 .header .info .call{
     border-radius: 12px;
-    width: 35px;
-    height: 35px;
+    width: 32px;
+    height: 32px;
 }
 @media (max-width: 768px) {
     .header .navbar-brand{
